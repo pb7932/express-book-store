@@ -10,7 +10,7 @@ app.use(function ( req, res, next )  {
 
 const homeRouter = require('./routes/home.router');
 const booksRouter = require('./routes/books.router');
-const authorRouter = require('./routes/author.router');
+const authorsRouter = require('./routes/authors.router');
 
 
 app.set('views', path.join(__dirname, 'views'));
@@ -18,9 +18,10 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'views')));
 
+app.use(express.urlencoded({extended: true}));
 app.use('/', homeRouter);
 app.use('/books', booksRouter);
-app.use('/author', authorRouter);
+app.use('/authors', authorsRouter);
 
 
 app.listen(80);
