@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname, 'views')));
 
 app.use('/', homeRouter);
 app.use('/books', booksRouter);
-//app.use('/author', authorRouter);
+app.use('/author', authorRouter);
 
 
 app.listen(80);
