@@ -1,4 +1,4 @@
-module.exports = 
+const AuthorClass = 
     class Author {
         constructor(id, firstName, lastName, DOB, gender) {
             this.id = id;
